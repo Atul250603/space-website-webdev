@@ -1,0 +1,827 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.index-body::before{
+    content:'';
+    background: url("../assets/home/background-home-desktop.jpg") no-repeat center center/cover;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:100vh;
+    opacity:0.9;  
+    z-index: -1;   
+}
+.dest-body::before{
+    content:'';
+    background: url("../assets/destination/background-destination-desktop.jpg") no-repeat center center/cover;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:100vh;
+    opacity:0.9;  
+    z-index: -1;   
+}
+
+.crew-body::before{
+    content:'';
+    background: url("../assets/crew/background-crew-desktop.jpg") no-repeat center center/cover;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:100vh;
+    opacity:0.9;  
+    z-index: -1;   
+}
+.tech-body::before{
+    content:'';
+    background: url("../assets/technology/background-technology-desktop.jpg") no-repeat center center/cover;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:100vh;
+    opacity:0.9;  
+    z-index: -1;   
+}
+body{
+    padding:50px;
+    padding-right: 0;
+    color:white;
+    height: 100vh;
+    z-index: 10;
+    /* width:100vw; */
+}
+.nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.nav .hr{
+    /* border:2px solid white; */
+    width:40%;
+}
+.nav .hr hr{
+    width:100%;
+    border:1px solid grey;
+    border-bottom: none;
+    
+}
+.nav .mainnav{
+    width: 60%;
+    border-radius: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    backdrop-filter: blur(110px);
+}
+.nav .hamburger{
+    padding: 8px 10px;
+    display:none;
+    width: 100%;
+}
+.nav .hamburger:hover{
+    cursor: pointer;
+}
+.nav .hamburger div{
+    width: 15px;
+    height: 5px;
+    border-bottom: 2px solid #D0D6F9;
+}
+.nav .hamburger div:hover{
+    border-bottom: 2px solid white;
+}
+.nav .mainnav .close-btn{
+    width: 32px;
+    height: 32px;
+    position:absolute;
+    top:20px;
+    right:10px;
+    display:none;
+}
+.nav .mainnav .close-btn div{
+    position: absolute;
+    width:2px;
+    height:20px;
+    left:15px;
+    background-color:#D0D6F9;
+}
+.nav .mainnav .close-btn div:nth-child(1){
+    transform:rotate(-45deg);
+}
+.nav .mainnav .close-btn div:nth-child(2){
+    transform:rotate(45deg);
+}
+.nav .mainnav nav ul{
+    width:90%;
+    padding:20px;
+}
+.nav .mainnav nav ul li{
+    list-style: none;
+    display: inline;
+    margin: 0 20px;
+    margin-right:none;
+   
+}
+.nav .mainnav nav ul li a{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2.7px;
+    padding-bottom: 18px;
+}
+.nav .mainnav nav ul li a:hover{
+    border-bottom: 2px solid grey;
+}
+.nav .mainnav nav ul li a:active{
+    border-bottom: 2px solid white;
+}
+.content{
+    display:flex;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px;
+}
+
+.content .home-text{
+    width:50%;
+}
+.content .btn{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .btn .onHover{
+    
+    border-radius: 50%;
+}
+.content .btn button{
+    font-family: 'Bellefair', serif;
+    font-size: 40px;
+    border-radius: 50%;
+    width: 180px;
+    height:180px;
+    background-color: white;
+    border: none;
+    
+}
+.content .btn button:hover{
+    cursor: pointer;
+}
+.content .btn .onHover:hover{
+    padding: 20px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transform: scale(1.25);
+    background-color: grey;
+}
+.content .home-text h5{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    letter-spacing: 4.75px;
+    color: #D0D6F9;
+}
+.content .home-text h1{
+    font-family: 'Bellefair', serif;
+    font-size: 150px;
+}
+.content .home-text p{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    color: #D0D6F9;
+}
+.heading h5{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    letter-spacing: 4.75px;
+    color: white;
+    padding-top: 35px;
+}
+.numeric{
+    color: grey;
+}
+.dest-content{
+    padding: 50px 50px 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.dest-content .image{
+    width:40%;
+    margin-right: 80px;
+}
+.dest-content .image img{
+    width: 100%;
+}
+.dest-content .dest-details{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+.dest-content .dest-details .dest-links ul{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.dest-content .dest-details .dest-links ul li{
+    display: inline;
+    list-style: none;
+    margin-right: 10px;
+}
+.dest-content .dest-details .dest-links ul li a{
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    color: #D0D6F9;
+}
+.dest-content .dest-details .dest-links ul li a:hover{
+    border-bottom: 2px solid grey;
+}
+.dest-content .dest-details .dest-links ul li a:active{
+    border-bottom: 2px solid white;
+}
+.dest-content .dest-details .dest-text h1{
+    font-family: 'Bellefair', serif;
+    font-size: 45px;
+    color: white;
+    margin-bottom: 10px;
+}
+.dest-content .dest-details .dest-text p{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    color: #D0D6F9;
+    width: 70%;
+    margin-bottom: 30px;
+}
+.dest-content .dest-details .dest-text hr{
+    border: 1px solid grey;
+    border-bottom: none;
+}
+.dest-content .dest-details .dest-text .numeric-facts{
+    margin-top:25px;
+    display: flex;
+}
+.dest-content .dest-details .dest-text .numeric-facts .avgdist{
+    margin-right:30px;
+}
+.dest-content .dest-details .dest-text .numeric-facts h3{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    color: #D0D6F9;
+}
+.dest-content .dest-details .dest-text .numeric-facts h1{
+    padding-top: 10px;
+    font-family: 'Bellefair', serif;
+    font-size: 25px;
+    color: white;
+}
+.crew-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 98%;
+    /* padding-left: 50px; */
+}
+.crew-content .crew-details{
+    width: 49%;
+}
+.crew-content .crew-details .heading{
+    margin-bottom: 30px;
+}
+.crew-content .crew-details .crew-text h5{
+    font-family: 'Bellefair', serif;
+    font-size: 35px;
+    color: grey;
+    margin-bottom: 10px;
+}
+.crew-content .crew-details .crew-text h1{
+    font-family: 'Bellefair', serif;
+    font-size: 55px;
+    color: white;
+    margin-bottom: 10px;
+}
+.crew-content .crew-details .crew-text p{
+    width: 100%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    color: #D0D6F9;
+}
+.crew-content .crew-details .crew-links ul{
+    display: flex;
+    width: 100%;
+    padding-left: 30px;
+}
+.crew-content .crew-details .crew-links ul a{
+    text-decoration: none;
+    color: grey;
+    margin-right: 40px;
+}
+.crew-content .crew-details .crew-links ul a:hover{
+    color: lightgray;
+}
+.crew-content .crew-details .crew-links ul a:active{
+    color: white;
+}
+.crew-content .crew-details .crew-links li{
+    font-size: 50px;
+}
+.crew-content .crew-image{
+    width: 49%;
+    height:100%;
+    position: relative;
+}
+.crew-content .crew-image img{
+    width: 50%;
+    position:absolute;
+    bottom: 0;
+    left:10%;
+}
+.tech-content{
+    display:flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.tech-content .tech-details{
+    width: 60%;
+    display:flex;
+}
+.tech-content .tech-details .tech-links{
+    width:10%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+.tech-content .tech-details .tech-links a{
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    font-family: 'Bellefair', serif;
+    border: 1px solid grey;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tech-content .tech-details .tech-links a:hover{
+    border-color: white;
+}
+.tech-content .tech-details .tech-links a:active{
+    background-color: white;
+    color: black;
+}
+.tech-content .tech-details .tech-text{
+    width:80%;
+    margin-left: 40px;
+    text-align: center;
+}
+.tech-content .tech-details .tech-text h5{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    color: #D0D6F9;
+    letter-spacing: 2.7px;
+    margin-bottom: 15px;
+}
+.tech-content .tech-details .tech-text h1{
+    font-family: 'Bellefair', serif;
+    font-size: 45px;
+    color: white;
+    margin-bottom: 20px;
+}
+.tech-content .tech-details .tech-text p{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    color: #D0D6F9;
+    margin-bottom: 15px;
+}
+.tech-content .tech-image{
+    width:50%;
+}
+.tech-content .tech-image .landscapeimg{
+    display:none;
+}
+.tech-content .tech-image .potraitimg{
+    width:40%;
+    margin: 0 auto;
+    display: block;
+}
+@media only screen and (max-width:1137px){
+    .nav .mainnav nav ul li a{
+        letter-spacing: 1px;
+    }
+    .dest-content .dest-details .dest-text h1{
+        font-size: 40px;
+    }
+    .dest-content .dest-details .dest-text p{
+        font-size: 15px;
+    }
+    .dest-content .dest-details .dest-text .numeric-facts h3{
+        font-size: 15px;
+    }
+    .dest-content .dest-details .dest-text .numeric-facts h1{
+        font-size: 20px;
+    }
+}
+/* @media only screen and (max-width:1145px){
+    .crew-content .crew-image img{
+        height: 70%;
+    }
+} */
+@media only screen and (max-width:1114px){
+    .crew-content .crew-details .crew-text h1{
+        font-size: 45px;
+    }
+}
+/* @media only screen and (max-width:1044px){
+    .crew-content .crew-image img{
+        height: 65%;
+    }
+    
+} */
+@media only screen and (max-width:1008px){
+    .nav .mainnav nav ul li{
+        margin: 0 10px;
+        margin-right:none;
+       
+    }
+    .dest-content .dest-details .dest-text p{
+        width: 90%;
+    }
+
+    .crew-content .crew-details .crew-text h5{
+        font-size: 20px;
+    }
+    .crew-content .crew-details .crew-text h1{
+        font-size: 30px;
+    }
+    .crew-content .crew-details .crew-text p{
+        font-size: 20px;
+    }
+    .crew-content .crew-details .crew-links li{
+        font-size: 35px;
+    }
+}
+/* @media only screen and (max-width:911px){
+    .crew-content .crew-image img{
+        height: 55%;
+    }
+    
+} */
+@media only screen and (max-width:861px){
+    .nav .hr{
+        display:none;
+    }
+    .nav .mainnav{
+        width: 100%;
+    }
+    .content .home-text h5{
+        font-size: 20px;
+    }
+    .content .home-text h1{
+        font-size: 100px;
+    }
+
+    .tech-content .tech-details .tech-links a{
+        width: 40px;
+        height: 40px;
+    }
+    .tech-content .tech-details .tech-text{
+        text-align: center;
+        width: 80%;
+    }
+    .tech-content .tech-details .tech-text h5{
+       
+        font-size: 10px;
+    }
+    .tech-content .tech-details .tech-text h1{
+        font-size: 30px;
+    }
+    .tech-content .tech-details .tech-text p{
+        font-size: 10px;
+    }
+    .dest-content .dest-details .dest-text p{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .content .btn button{
+        width: 100px;
+        height: 100px;
+        font-size: 30px;
+    }
+    .content .btn .onHover:hover{
+        padding: 20px;
+    }
+
+}
+@media only screen and (max-width:769px){
+    .index-body::before{
+        background: url("../assets/home/background-home-tablet.jpg") no-repeat center center/cover;  
+    }
+    .dest-body::before{
+        background: url("../assets/destination/background-destination-tablet.jpg") no-repeat center center/cover; 
+    }
+    .crew-body::before{
+        background: url("../assets/crew/background-crew-tablet.jpg") no-repeat center center/cover; 
+    }
+    .tech-body::before{
+        background: url("../assets/technology/background-technology-tablet.jpg") no-repeat center center/cover; 
+    }
+}
+@media only screen and (max-width:752px){
+    .dest-content{
+        padding-top: 30px;
+    }
+    .dest-content .dest-details .dest-text h1{
+        font-size: 20px;
+    }
+    .dest-content .dest-details .dest-text p{
+        font-size: 15px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .dest-content .dest-details .dest-text .numeric-facts{
+        margin-top:10px;
+    }
+    .dest-content .dest-details .dest-text .numeric-facts h3{
+        font-size: 10px;
+    }
+    .dest-content .dest-details .dest-text .numeric-facts h1{
+        font-size: 15px;
+        padding-top: 10px;
+    }
+    .content .home-text h5{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .content .home-text h1{
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    .content .home-text p{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:668px){
+    .content .home-text{
+        width:70%;
+    }
+    .content .btn{
+        width:30%;
+    }
+    .content .btn button{
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+    .content .btn .onHover:hover{
+        padding: 10px;
+    }
+}
+@media only screen and (max-width:622px){
+    .heading h5{
+        font-size:20px ;
+    }
+    .crew-content .crew-details .crew-text h5{
+        font-size: 15px;
+    }
+    .crew-content .crew-details .crew-text h1{
+        font-size: 20px;
+    }
+    .crew-content .crew-details .crew-text p{
+        font-size: 15px;
+    }
+    .crew-content .crew-details .crew-links li{
+        font-size: 30px;
+    }
+    
+    /* .crew-content .crew-image img{
+        height: 55%;
+    } */
+    
+}
+@media only screen and (max-width:580px){
+    /* .crew-content .crew-image img{
+        height: 45%;
+    } */
+    .nav .mainnav nav ul{
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width:550px){
+    .heading h5{
+        font-size:15px ;
+    }
+    .dest-content{
+        flex-direction: column;
+        padding-right: 30px;
+        width: 100%;
+        padding-left:0;
+    }
+    .dest-content .image{
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right:0;
+    }
+    .dest-content .image img{
+        width: 30%;
+        margin:0 auto;
+        display: block;
+    }
+    .dest-content .dest-details{
+        text-align: center;
+    }
+    .dest-content .dest-details .dest-links ul{
+        margin-bottom: 10px;
+    }
+    .dest-content .dest-details .dest-links ul li a{
+        font-size: 15px;
+    }
+    .dest-content .dest-details .dest-text h1{
+        font-size: 20px;
+    }
+    .dest-content .dest-details .dest-text p{
+        font-size: 10px;
+    }
+    .heading{
+        text-align: center;
+    }
+    .heading h5{
+        letter-spacing: 1px;
+        padding-right: 30px;
+    }
+    .dest-content .dest-details .dest-text .numeric-facts{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .dest-content .dest-details .dest-text .numeric-facts .avgdist,.esttime{
+        margin:0 auto;
+        display:block;
+    }
+    .tech-content{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-right: 30px;
+    }
+
+    .tech-content .tech-details .tech-text{
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .tech-content .tech-image{
+        width: 100%;
+    }
+    .tech-content .tech-image .potraitimg{
+        display: none;
+    }
+    .tech-content .tech-image .landscapeimg{
+        display: block;
+        width: 100%;
+        height: 80px;
+        margin:10px 0;
+    }
+    .tech-content .tech-details{
+        flex-direction: column;
+    }
+    .tech-content .tech-details .tech-links{
+        flex-direction: row;
+        width: 100%;
+        padding-right:0 ;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    .tech-content .tech-details .tech-links a{
+        margin-right: 30px;
+        width: 20px;
+        height: 20px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    }
+    .tech-content .tech-details .tech-text h5{
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+    .tech-content .tech-details .tech-text h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .tech-content .tech-details .tech-text p{
+        font-size:10px ;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .crew-content{
+        display: block;
+        text-align: center;
+        padding-right: 30px;
+        height: max-content;
+    }
+    .crew-content .crew-details{
+        width: 100%;
+    }
+    .crew-content .crew-image{
+        width: 100%;
+        height:fit-content;
+    }
+    .crew-content .crew-image img{
+        height: auto;
+        /* width: 30%; */
+        position: static;
+        margin: 0 auto;
+        display: block;
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 2px 2px    ;
+
+    }
+    .crew-content .crew-details .crew-links ul{
+        align-items: center;
+        justify-content: center;
+        padding: 0; 
+        margin-left: 20px;
+    }
+    .content{
+        flex-direction: column;
+        padding-right: 30px;
+        padding-top: 50px;
+        width: 100%;
+    }
+    .content .home-text{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    body{
+        padding: 25px 0 0 30px;
+    }
+    .nav .mainnav{
+        display: none;
+    }
+    .nav .hamburger{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .index-body::before{
+        background: url("../assets/home/background-home-mobile.jpg") no-repeat center center/cover;  
+    }
+    .dest-body::before{
+        background: url("../assets/destination/background-destination-mobile.jpg") no-repeat center center/cover; 
+    }
+    .crew-body::before{
+        background: url("../assets/crew/background-crew-mobile.jpg") no-repeat center center/cover; 
+    }
+    .tech-body::before{
+        background: url("../assets/technology/background-technology-mobile.jpg") no-repeat center center/cover; 
+    }
+
+}
+@media only screen and (max-width:314px){
+    .heading h5{
+        font-size:10px;
+    }
+    .dest-content .dest-details .dest-links ul li a{
+        font-size: 10px;
+    }
+    .dest-content .dest-details .dest-text h1{
+        font-size: 15px;
+    }
+    .content .home-text h5{
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .content .home-text h1{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .content .home-text p{
+        font-size: 10px;
+        margin-bottom: 50px;
+    }
+
+}
